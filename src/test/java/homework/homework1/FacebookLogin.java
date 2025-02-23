@@ -1,4 +1,4 @@
-package homework;
+package homework.homework1;
 
 import com.codeborne.selenide.*;
 import methods.CloseCookieBanner;
