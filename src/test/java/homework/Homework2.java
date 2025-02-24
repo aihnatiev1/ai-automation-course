@@ -28,7 +28,7 @@ public class Homework2 {
     public void operation1() {
         int g = 3;
         double c = 1.5;
-        double result = g * c;
+        double result = g / c;
         System.out.println("Test 3: " + result);
     }
 

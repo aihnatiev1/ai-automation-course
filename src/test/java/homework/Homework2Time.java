@@ -48,7 +48,7 @@ public class Homework2Time {
         SimpleDateFormat format = new SimpleDateFormat("EEE MMM dd HH:mm:ss yyyy", Locale.ENGLISH);
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(timestamp.getTime());
-        calendar.add(Calendar.YEAR, -100);
+        calendar.add(Calendar.YEAR, +100);
         Timestamp someTimeAgo = new Timestamp(calendar.getTimeInMillis());
         System.out.println("One hundred year ago " + someTimeAgo);
     }
