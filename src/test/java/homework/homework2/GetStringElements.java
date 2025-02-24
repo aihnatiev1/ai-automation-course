@@ -4,7 +4,7 @@ public class GetStringElements {
     String s = "Java is a programming language";
     int lenght = s.length();
     char index1 = s.charAt(0);
-    char index2 = s.charAt(29);
+    char index2 = s.charAt(s.length() - 1);
 }
 
 class Print {
