@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
@@ -34,6 +35,20 @@ public class Imbd {
         String rating = listFilms.findBy(text("9.3")).$(".ipc-rating-star--rating").getText();
         System.out.println(name);
         System.out.println(rating);
+    }
+
+    @Test
+    public void findFilmWithSpecificRating1() {
+        Selenide.open("https://www.imdb.com/chart/top/");
+        ElementsCollection listFilms = $$(".ipc-metadata-list li");
+        List<SelenideElement> collect = listFilms.stream().filter(el ->
+                Double.parseDouble(el.$(".ipc-rating-star--rating").text().trim()) >= 9.0).collect(Collectors.toList());
+
+        collect.forEach(el -> {
+            System.out.println(el.$(".ipc-title--title").text());
+            System.out.println(el.$(".ipc-rating-star--rating").text());
+            System.out.println("___________________________");
+        });
     }
 
     @Test
