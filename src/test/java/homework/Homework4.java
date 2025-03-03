@@ -2,6 +2,8 @@ package homework;
 
 import org.testng.annotations.Test;
 
+import java.util.Scanner;
+
 public class Homework4 {
 
     @Test
@@ -82,9 +84,69 @@ public class Homework4 {
         }
     }
 
-//    @Test
-//    public void task5() {
-//        int day;
-//
-//    }
+    @Test
+    public void task5() {
+        int months = 1;
+        String season = getSeason(months);
+        System.out.println("Month: " + months + ", Season: " + season);
+    }
+
+    private String getSeason(int months) {
+        switch (months) {
+            case 12:
+            case 1:
+            case 2:
+                return "Winter";
+            case 3:
+            case 4:
+            case 5:
+                return "Spring";
+            case 6:
+            case 7:
+            case 8:
+                return "Summer";
+            case 9:
+            case 10:
+            case 11:
+                return "Outumn";
+            default:
+                return "Wrong month!";
+        }
+
+    }
+
+    @Test
+    public void task6() {
+        int dayNum = 7;
+        String dayName = getDays(dayNum);
+        System.out.println("It's " + dayName + "!");
+    }
+
+    private String getDays(int dayNum) {
+        switch (dayNum) {
+            case 1:
+                return "Monday";
+            case 2:
+                return "Tuesday";
+            case 3:
+                return "Wednesday";
+            case 4:
+                return "Thursday";
+            case 5:
+                return "Friday";
+            case 6:
+                return "Saturday";
+            case 7:
+                return "Sunday";
+            default:
+                return "Wrong day!";
+
+        }
+
+    }
+
+    @Test
+    public void task7() {
+
+    }
 }
