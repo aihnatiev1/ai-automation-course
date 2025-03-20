@@ -44,6 +44,7 @@ public class EmailValidationTest {
         driver.findElement(By.cssSelector("#iam-boy + label")).click();
         driver.findElement(By.cssSelector("#user-reg-myname")).clear();
         driver.findElement(By.cssSelector("#user-reg-myname")).sendKeys(s.name);
+        driver.findElement(By.cssSelector("#user-reg-myname121")).sendKeys(s.profession);
 
         Thread.sleep(2000);
     }
@@ -53,6 +54,14 @@ public class EmailValidationTest {
     @DataProvider
     public Object[][] names(){
         return new Object[][]{
+                {new User("asd")},
+                {new User("asd")},
+                {new User("asd")},
+                {new User("asd")},
+                {new User("asd")},
+                {new User("asd")},
+                {new User("asd")},
+                {new User("asd")},
                 {new User("asd")},
                 {new User("asd")},
                 {new User("asd")},

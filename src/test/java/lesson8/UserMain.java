@@ -9,7 +9,7 @@ public class UserMain {
         User user1 = new User();
         User user2 = new User();
 
-        User.profession = "Slut";
+        User.profession = "Головєшка";
 
 
         System.out.println("User class: "+User.profession);
