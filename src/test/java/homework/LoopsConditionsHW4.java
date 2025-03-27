@@ -2,9 +2,7 @@ package homework;
 
 import org.testng.annotations.Test;
 
-import java.util.Scanner;
-
-public class Homework4 {
+public class LoopsConditionsHW4 {
 
     @Test
     public void task1() {

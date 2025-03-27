@@ -9,10 +9,10 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.actions;
 
-public class Homework {
+public class Homework1 {
 
     @Test
-    public void HomeWork() {
+    public void homeWork() {
         Selenide.open("https://www.facebook.com/");
         $("[placeholder='Email or phone number']").shouldBe(Condition.visible).setValue("dimakrug1803@gmail.com");
         $("[placeholder='Password']").shouldBe(Condition.visible).setValue("Dimon451263!");
